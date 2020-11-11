@@ -14,10 +14,10 @@ const run = async () => {
         const RANDOM_DELAY = Math.floor(Math.random() * 50) + 30;
 
         await page.waitForSelector('#emailInput')
-        await page.type('#emailInput', 'rafael.santos@linkapi.com.br', { delay: RANDOM_DELAY })
+        await page.type('#emailInput', process.env.EMAIL, { delay: RANDOM_DELAY })
 
         await page.waitForSelector('#passwordInput')
-        await page.type('#passwordInput', '12ZTqLJP', { delay: RANDOM_DELAY })
+        await page.type('#passwordInput', process.env.PASSWORD, { delay: RANDOM_DELAY })
 
         await page.waitForSelector('.row > .col-12 > login > .ng-dirty > .lkp-btn')
         await page.click('.row > .col-12 > login > .ng-dirty > .lkp-btn')

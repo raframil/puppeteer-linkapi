@@ -34,7 +34,7 @@ const run = async () => {
             });
             return components
         });
-
+        
         await browser.close()
         return results
     } catch (error) {
@@ -42,4 +42,4 @@ const run = async () => {
     }
 }
 
-run();
+module.exports = run;
